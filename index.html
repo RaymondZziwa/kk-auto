@@ -142,7 +142,7 @@
             font-family: 'PT Sans Narrow', sans-serif;
             font-weight: bolder;
         }
-        #who_we_are span{
+        #here{
             color: grey;
             font-size: 1.8rem;
             font-style: italic;
@@ -190,6 +190,18 @@
         /*Testimonial Header*/
         h2{
             font-size: 1.6rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        h2:before{
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 1px;
+            bottom: 0;
+            left: 25%;
+            border-bottom: 1px solid black;
         }
         #t-header{
             text-align: center;
@@ -356,7 +368,8 @@
         <!--Engine-->
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" id="engine">
-                <h2 id="who_we_are">Confused?<span>This is who we are...</span></h2>
+                <h2 id="who_we_are">Confused?</h2>
+                <span id="here">This is who we are...</span>
                 <p style="font-family: 'ABeeZee', sans-serif;font-size:1.8rem;">Home to quality Original Mercedes Benz Spare Parts</p>
                 <p style="font-family: 'M PLUS Rounded 1c', sans-serif;font-size: 1.3rem;font-weight: bold;">
                     KK AutoParts is among the top suppliers of mercedes spare parts in South Africa.<br>
@@ -373,7 +386,7 @@
         <div class="row" id="T-container">
             <div class="row" id="t-header">
                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <h2 style="font-size: 1.6rem;font-family: 'Nunito', sans-serif;">Why Us?</h2>
+                    <h2 style="font-size: 2.6rem;font-family: 'Nunito', sans-serif;font-weight: bold;">Why Us?</h2>
                     <p style="font-size: 1.3rem;font-family: 'Nunito', sans-serif;">Testimonials</p>
                 </div>
             </div>
