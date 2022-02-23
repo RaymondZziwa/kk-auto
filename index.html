@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KK Auto Parts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Roboto:ital,wght@1,100&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@200&family=Lemonada&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <style>
+
+      html,
+      body {
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+        background-color: aliceblue;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+        }
+         .container-fluid {
+                width: 100%;
+                padding: 0;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /*navbar*/
+        #navbar{
+            background-color: black;
+        }
+        #log:hover{
+            color:white;
+            background-color: black;
+        }
+        #cart{
+            cursor: pointer;
+        }
+        #links{
+            background-color: black;
+            text-align: center;
+        }
+        #links ul{
+            list-style-type: none;
+            overflow: hidden;
+        }
+        #links ul li{
+            display: inline-block;
+            margin-right: 20px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #links ul li:hover{
+            color: grey;
+        }
+        #links a{
+            text-decoration: none !important;
+            color: azure;
+        }
+        .wrapper {
+            /*This part is important for centering*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 120px;
+        }
+
+        #intro {
+            width: 20ch;
+            animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+            font-family: "Exo", sans-serif;
+            font-weight: bolder;
+            font-style: italic;
+            color: white;
+            background-color: black;
+            opacity: 80%;
+            font-size: 2.8rem;
+            margin-top: 100px;
+        }
+
+        @keyframes typing {
+            from {
+            width: 0;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+            border-color: transparent;
+            }
+        }
+        /*Motto*/
+        #motto{
+            background-image: url(imgs/pexels-mike-120049.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 800px;
+            position: relative;
+        }
+        #goto_shop{
+            position: absolute;
+            left: 40%;
+        }
+        /* from professionals
+        #car{
+            background-image: url(imgs/car.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height:600px;
+        } */
+        /*Engine img*/
+        #engine{
+            background-image: url(imgs/engine3.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 800px;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        #who_we_are{
+            margin-top: 16%;
+            font-size: 2.8rem;
+            font-family: 'PT Sans Narrow', sans-serif;
+            font-weight: bolder;
+        }
+        #who_we_are span{
+            color: grey;
+            font-size: 1.8rem;
+            font-style: italic;
+        }
+        #engine p {
+            margin-top: 25px;
+            /* font-size: 21px; */
+            animation: fadein 8s;
+            -moz-animation: fadein 8s; /* Firefox */
+            -webkit-animation: fadein 8s; /* Safari and Chrome */
+            -o-animation: fadein 8s; /* Opera */
+        }
+        @keyframes fadein {
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-moz-keyframes fadein { /* Firefox */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-webkit-keyframes fadein { /* Safari and Chrome */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-o-keyframes fadein { /* Opera */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        /*Testimonial Header*/
+        h2{
+            font-size: 1.6rem;
+        }
+        #t-header{
+            text-align: center;
+            z-index: 1;
+        } 
+        /*Testimonials*/
+        #T-container{
+            margin-bottom: 50px;     
+        }
+        #testimonial{
+            background-color: white;
+            height: 250px;
+            overflow-wrap: break-word;
+            padding-left: 45px;
+            border-radius: 20px;
+        }
+        /*feedback-header*/
+        #feedback-header{
+            z-index: 1;
+            height: 500px;
+            background-image: url(imgs/samuele-errico-piccarini-FMbWFDiVRPs-unsplash.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        /*feedback form*/
+        h3{
+            text-align: center;
+            color: aliceblue;
+            margin-top: -220px;
+            font-size: 1.5rem;
+            font-family: 'Nunito', sans-serif;
+            position: absolute;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        h3:before{
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 1px;
+            bottom: 0;
+            left: 25%;
+            border-bottom: 1px solid white;
+        }
+         form{
+            margin-top: -150px; 
+            /* border: 2px solid black; */
+            border-radius:10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            z-index: 5;
+            background-color: white;
+        } 
+
+        form .form-control{
+            margin-top: 20px;
+            padding: 10px;
+        }
+        button{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        /*Footer css*/
+        #footer{
+            background-color:  rgb(32, 32, 32);
+            justify-content: center;
+        }
+        #footer a {
+            color: grey;
+            text-decoration: none !important;
+        }
+        #footer a:hover{
+            color: aliceblue;
+        }
+        #policy{
+            margin-top: 10px;
+            color: azure;
+            text-align: center;
+            background-color: rgb(14, 13, 13);
+            font-family: 'PT Sans Narrow', sans-serif;
+        }
+         h4{
+            color: whitesmoke;
+            font-family: 'Lemonada', cursive;
+            text-align: center;
+        }
+        h4:hover{
+            background: -webkit-linear-gradient(rgb(8, 8, 8), rgb(255, 255, 255));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        #contact , #bio,#info{
+            color: grey;
+            /* font-family: 'Lemonada', cursive; */
+            font-family: 'Krub', sans-serif;
+            font-size: 1.2rem;
+        }
+        #bio,#info{
+            position: relative;
+        }
+        #bio::after{
+            content: " ";
+            position: absolute;
+            width: 1px;
+            right: -3px;
+            height: 60%;
+            top: 50%;
+            background: grey;
+            transform: translate(-50%, -50%);
+        }
+        #info::after{
+            content: " ";
+            position: absolute;
+            width: 1px;
+            right: -3px;
+            height: 60%;
+            top: 50%;
+            background: grey;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!--Header-->
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" id="motto">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" id="navbar">
+                        <nav class="navbar navbar-dark bg-dark">
+                            <a href="index.html"><img src="imgs/logo.png" height="80px"></a>
+                            <!-- <h1 style="font-size: 1.6rem;color: white;font-weight:bold;">KK AutoParts</h1> -->
+                            <button style="text-align:center;font-weight:bold;border:none;height:50px;border-radius:50px;font-family: 'Courgette', cursive;" id="log">Login/Register</button>
+                             <i class="fa fa-shopping-cart" style="color: white !important;font-size: 30px;margin-right: 50px;" id="cart"><span style="font-size: 0.8rem;color:black;background-color: white;width: 15px;height: 15px;position: absolute;text-align: center;margin: auto;border-radius: 100%;">0</span></i>
+                        </nav>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" id="links">
+                        <ul>
+                            <a href="shop.html"><li>Shop</li></a>
+                            <a href="#who_we_are"><li>About Us</li></a>
+                            <a href="#feedback-form"><li>Contact Us</li></a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--Heading-->
+                <div class="wrapper">
+
+                    <p id="intro">
+                        KK AutoParts
+                    </p>
+                </div>
+                <p style="font-family: 'M PLUS Rounded 1c', sans-serif;font-size: 2.3rem;font-weight: bold;color: white;text-align: center;background-color: black;opacity: 60%;">Home of Authentic & Original Mercedes spare parts</p>
+                <div id="goto_shop">
+                    <button style="text-align:center;font-weight:bold;border:none;height:80px;border-radius:50px;font-family: 'Courgette', cursive;width:180px;font-size: 1.5rem;" id="log">Check Our Store</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Engine-->
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" id="engine">
+                <h2 id="who_we_are">Confused?<span>This is who we are...</span></h2>
+                <p style="font-family: 'ABeeZee', sans-serif;font-size:1.8rem;">Home to quality Original Mercedes Benz Spare Parts</p>
+                <p style="font-family: 'M PLUS Rounded 1c', sans-serif;font-size: 1.3rem;font-weight: bold;">
+                    KK AutoParts is among the top suppliers of mercedes spare parts in South Africa.<br>
+                    We got you covered for all Benz classes with our original and premium parts.<br>
+                    Our Parts are both brand new and used depending on your preference.
+                </p>
+
+                <p style="font-size: 3.2rem;font-style: italic;font-family: 'Courgette', cursive;">"Come feel our touch of class"</p>
+            </div>
+        </div>
+
+
+        <!--Testimonials-->
+        <div class="row" id="T-container">
+            <div class="row" id="t-header">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <h2 style="font-size: 1.6rem;font-family: 'Nunito', sans-serif;">Why Us?</h2>
+                    <p style="font-size: 1.3rem;font-family: 'Nunito', sans-serif;">Testimonials</p>
+                </div>
+            </div>
+           <div class="row">
+            <div class="col-sm-5 col-md-4 col-lg-5 col-xl-5" style="margin: auto;" id="testimonial">
+                <div class="row" style="margin-top: 20px;">
+                    <img src="imgs/testim-1-90x90.jpg" height="18%" style="border-radius: 100%;width: 18%;">
+                    Kyle Dennis<br>
+                    Business Man
+                </div>
+                <div class="row">
+                    <p id="test">
+                        The selection of car parts and accessories is amazing! You will find anything and everything for any type of vehicle. I loved shopping with KK AutoParts because of the professionl sales and customer care team members who helped me get the best parts for my GLE! Excellent!
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-5 col-md-4 col-lg-5 col-xl-5" style="margin: auto;" id="testimonial">
+                <div class="row" style="margin-top: 20px;">
+                    <img src="imgs/testim-2-90x90.jpg" height="18%" style="border-radius: 100%;width: 18%;">
+                    Peters Dean<br>
+                    Pharmacist
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <p id="test">
+                            After ordering from this company, I am definitely going to stay and become a regular. Loved the service and the quality of products that look amazing on my car! the website is super easy to navigate, and I appreciate how simple it was to find the items that I needed! Thank you!
+                        </p>
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div>
+        <!--Feedback header-->
+        <div class="row" id="feedback-header">
+        </div>
+
+        <!--Feedback Form-->
+        <div class="row" id="feedback-form">
+            <div class="col-sm-10 col-md-5 col-lg-5 col-xl-5" style="margin: auto;">
+                    <h3 style="font-size: 1.8rem;">Give us feedback</h3>
+                    <form>
+                        <input type="text" class="form-control" placeholder="First Name" required>
+                        <input type="text" class="form-control" placeholder="Last Name" required>
+                        <input type="text" class="form-control" placeholder="Email" required>
+                        <input type="number" class="form-control" placeholder="Phone Number" required>
+                        <textarea style="height: 100px;" class="form-control" placeholder="message" required></textarea>
+                        <button class="btn btn-outline-primary">Send</button>
+                    </form>
+            </div>
+        </div>
+
+
+
+        <!---Footer-->
+        <div class="row" id="footer">
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3" id="bio">
+                    <h4>Auto Parts</h4>
+                    <p>Welcome to KK Auto Parts, your most reliable mercedes car repair company.We provide a whole wide range of spare parts for all mercedes car classes.
+                      For more information, send us an email, give us a call or visit our store located at 471 WF Nkomo Street  Pretoria West, Pretoria  Gauteng Province.   
+                    </p>
+                    <p>
+                        <a href="https://www.facebook.com/Lions-And-KK-Autoparts-1780321635558161/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    </p>
+            </div>
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3" id="info">
+                    <h4>Information</h4>
+                    <a href="">Blog</a><br>
+                    <a href="">About Us</a><br>
+                    <a href="">Refund Policy</a><br>
+                    <a href="">Privacy Policy</a>
+            </div>
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3" id="contact">
+                    <h4>Contact Us</h4>
+                    <i class="fa fa-map-marker"></i> 471 WF Nkomo Street <br> &nbsp;&nbsp;&nbsp;&nbsp;Pretoria West, Pretoria<br>  &nbsp;&nbsp;&nbsp;&nbsp;Gauteng Province.<br>
+                    <i class="fa fa-phone"></i> +27100230083<br>
+                    <i class="fa fa-phone"></i> +27712619966<br>
+                    <i class="fa fa-envelope-o"></i> kkautoparts19@gmail.com
+            </div>
+            <div class="row" id="policy">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <p id="privacy-policy" style="margin: auto;font-style: italic;">KK Auto Parts &copy;All rights reserved.Terms of use and Privacy Policy</p>
+                </div>
+            </div>
+            <div class="row" id="dev">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <p id="developer" style="margin: auto;color: goldenrod;font-style: italic;text-align: center;font-size: 0.8rem;">Developed by Megacode.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>
